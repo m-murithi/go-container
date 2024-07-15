@@ -23,18 +23,6 @@ func main() {
     }
 }
 
-func child() {
-    fmt.Println("Running inside the container")
-    cmd := exec.Command("/bin/sh")
-    cmd.Stdin = os.Stdin
-    cmd.Stdout = os.Stdout
-    cmd.Stderr = os.Stderr
-    if err := cmd.Run(); err != nil {
-        fmt.Println("Error:", err)
-        os.Exit(1)
-    }
-}
-
 func init() {
     if len(os.Args) > 1 && os.Args[1] == "child" {
         child()
