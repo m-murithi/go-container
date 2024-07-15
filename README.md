@@ -65,3 +65,5 @@ go-container
 └── .gitignore # Git ignore file
 
 ```
+
+![container running](assets/gocontainer.png)
